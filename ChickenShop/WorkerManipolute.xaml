@@ -1,0 +1,25 @@
+﻿<Window x:Class="ChickenShop.WorkerManipolute"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChickenShop"
+        mc:Ignorable="d"
+        Title="اضافة عامل" Height="200" Width="500" ResizeMode="NoResize">
+    <Grid FlowDirection="RightToLeft">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".8*" MaxWidth="80"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label x:Name="lbWorkerName" Content="اسم العامل" Grid.Row="1" Margin="5"></Label>
+        <TextBox x:Name="tbWorkerName" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="5" ></TextBox>
+        <Button x:Name="btnWorkerNameConfirm" Content="اضافة" Grid.Row="2" Grid.Column="1" Margin="5" Click="BtnWorkerNameConfirm_Click"></Button>
+        <Button x:Name="btnWorkerCancel" Content="الغاء" Grid.Row="2" Grid.Column="3" Margin="5" Click="BtnWorkerCancel_Click"></Button>
+    </Grid>
+</Window>

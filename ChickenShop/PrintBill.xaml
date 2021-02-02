@@ -1,0 +1,104 @@
+﻿<Window x:Class="ChickenShop.PrintBill"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChickenShop"
+        mc:Ignorable="d"
+        Title="PrintedBill" Height="660" Width="535" FontSize="14" FontFamily="Roboto" FontWeight="Bold" ResizeMode="NoResize"
+        WindowStyle="SingleBorderWindow" WindowStartupLocation="CenterOwner" FlowDirection="RightToLeft">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.3*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1.3*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="stackBillUpperArea" Grid.ColumnSpan="4" Grid.Row="0" Margin="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height=".8*" MaxHeight="30"></RowDefinition>
+                    <RowDefinition Height=".8" MaxHeight="30"></RowDefinition>
+                    <RowDefinition Height="1*" MaxHeight="30"></RowDefinition>
+                    <RowDefinition Height="1*" MaxHeight="30"></RowDefinition>
+                    <RowDefinition Height="1*" MaxHeight="30"></RowDefinition>
+                    <RowDefinition Height="1*" MaxHeight="30"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="2" Content="محل الهدى" 
+                       HorizontalContentAlignment="Center" FontSize="22"></Label>
+                <Label Grid.Row="2" Grid.Column="0"  HorizontalContentAlignment="Center" Content="رقم الفاتورة" ></Label>
+                <TextBox x:Name="tbBillID" Grid.ColumnSpan="3" Grid.Row="2" Grid.Column="1" 
+                         HorizontalContentAlignment="Center"></TextBox>
+                <Label Grid.Row="3" Grid.Column="0" Content="التاريخ" FontSize="15" HorizontalContentAlignment="Center"></Label>
+                <TextBox x:Name="tbBillDate" Grid.Column="1" Grid.Row="3" HorizontalContentAlignment="Center"></TextBox>
+                <Label Grid.Row="3" Grid.Column="2" Content="الوقت" FontSize="15" HorizontalContentAlignment="Center"></Label>
+                <TextBox x:Name="tbBillTime" Grid.Column="3" Grid.Row="3" HorizontalContentAlignment="Center"></TextBox>
+                <Label Content="اسم العميل" Grid.Row="4" HorizontalContentAlignment="Center" Grid.Column="0" ></Label>
+                <TextBox x:Name="tbBillCustomerName" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="3" Margin="1"></TextBox>
+                <Label Content="الموبايل" Grid.Column="0" Grid.Row="5" Margin="2" HorizontalContentAlignment="Center"></Label>
+                <TextBox x:Name="tbCustomerMobile" Grid.Column="3" Margin="5,0"></TextBox>
+                <Label Content="العنوان" Grid.Column="2" Grid.Row="5" Margin="5,0" HorizontalContentAlignment="Center"></Label>
+                <TextBox x:Name="tbCustomerAddress" Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="2" Margin="1,0"></TextBox>
+            </Grid>
+        </StackPanel>
+        <DataGrid x:Name="dgBillItems" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="4" Margin="2"></DataGrid>
+        <Grid x:Name="gridBillLowerArea" Grid.ColumnSpan="4" Grid.Row="4" Grid.RowSpan="1" Margin="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Content="الاجمالى" HorizontalContentAlignment="Center"></Label>
+                <TextBox x:Name="tbTotalPrice" Grid.Column="1" Grid.ColumnSpan="2" 
+                         HorizontalContentAlignment="Center"></TextBox>
+                <Label Content="ج.م" Grid.Column="3" HorizontalContentAlignment="Center"></Label>
+                <Label Content="الخصم" Grid.Row="1" HorizontalContentAlignment="Center"></Label>
+                <TextBox x:Name="tbDiscountPrice" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" 
+                         HorizontalContentAlignment="Center"></TextBox>
+                <Label Content="ج.م" Grid.Column="3" HorizontalContentAlignment="Center" Grid.Row="1"></Label>
+                <Label Content="المدفوع" HorizontalContentAlignment="Center" Grid.Row="2"></Label>
+                <TextBox x:Name="tbPaidPrice" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" 
+                         HorizontalContentAlignment="Center"></TextBox>
+                <Label Content="ج.م" Grid.Column="3" Grid.Row="2" HorizontalContentAlignment="Center"></Label>
+                <Label Content="الباقى" HorizontalContentAlignment="Center" Grid.Row="3"></Label>
+                <TextBox x:Name="tbRemindedPrice" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" 
+                         HorizontalContentAlignment="Center"></TextBox>
+                <Label Content="ج.م" Grid.Column="3" HorizontalContentAlignment="Center" Grid.Row="3"></Label>
+                <Label Content="اسم العامل" Grid.Row="4" HorizontalContentAlignment="Center" Grid.Column="1"
+                       Margin="1"></Label>
+                <TextBox x:Name="tbWorkerName" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" 
+                         HorizontalContentAlignment="Center" Margin="1"></TextBox>
+            </Grid>
+        </Grid>
+        
+    
+        <Grid Grid.ColumnSpan="4" Grid.RowSpan="5">
+            <FlowDocumentScrollViewer x:Name="flow" ></FlowDocumentScrollViewer>
+        </Grid>
+    
+    </Grid>
+
+        
+</Window>

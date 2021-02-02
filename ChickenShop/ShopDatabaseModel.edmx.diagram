@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="53626ed77a994516acf69fbb32194527" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="Chicken_Shop.TbBill_Items" Width="1.5" PointX="10" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Chicken_Shop.TbBill" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Chicken_Shop.TbBillsItemsBridge" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Chicken_Shop.TbCustomer" Width="1.5" PointX="9" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Chicken_Shop.TbItemType" Width="1.5" PointX="7.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Chicken_Shop.TbPassword" Width="1.5" PointX="11.625" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Chicken_Shop.TbStock" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Chicken_Shop.TbWorker" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <AssociationConnector Association="Chicken_Shop.FK_TbBill_Items_TbItemTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="Chicken_Shop.FK_TbBillsItemsBridge_TbBill_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="Chicken_Shop.FK_TbBills_TbCustomer" ManuallyRouted="false" />
+        <AssociationConnector Association="Chicken_Shop.FK_TbBills_TbWorkers" ManuallyRouted="false" />
+        <AssociationConnector Association="Chicken_Shop.FK_TbBillsItemsBridge_TbBills" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Chicken_Shop.sysdiagram" Width="1.5" PointX="7.375" PointY="4.75" />
+        <EntityTypeShape EntityType="Chicken_Shop.TbTreader" Width="1.5" PointX="0.75" PointY="4.5" />
+        <EntityTypeShape EntityType="Chicken_Shop.TbTreaderTransaction" Width="1.5" PointX="3.875" PointY="7" />
+        <AssociationConnector Association="Chicken_Shop.FK_TbBills_TbTeaders1" />
+        <AssociationConnector Association="Chicken_Shop.FK_TbTeaderTransactions_TbTeaders" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
