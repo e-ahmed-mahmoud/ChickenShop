@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Printing;
 using System.Drawing;
+using ChickenShop.DbOperationsDL;
 
 namespace ChickenShop
 {

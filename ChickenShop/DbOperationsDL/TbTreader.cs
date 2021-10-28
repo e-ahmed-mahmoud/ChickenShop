@@ -7,26 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ChickenShop
+namespace ChickenShop.DbOperationsDL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class TbCustomer
+    public partial class TbTreader
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TbCustomer()
+        public TbTreader()
         {
             this.TbBills = new HashSet<TbBill>();
+            this.TbTreaderTransactions = new HashSet<TbTreaderTransaction>();
         }
     
-        public long Customer_ID { get; set; }
-        public string CustomerName { get; set; }
-        public string CustomerAddress { get; set; }
-        public string CustomerMobileNumber { get; set; }
-        public Nullable<int> CustomerPoints { get; set; }
+        public long TreaderID { get; set; }
+        public string TreaderName { get; set; }
+        public decimal Money { get; set; }
+        public string TreaderMobileNumber { get; set; }
+        public string TreaderAddress { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TbBill> TbBills { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TbTreaderTransaction> TbTreaderTransactions { get; set; }
     }
 }

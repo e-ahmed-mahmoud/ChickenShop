@@ -88,69 +88,81 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BillData.cs" />
+    <Compile Include="DbOperationsDL\serviceImplmentation\BillDb.cs" />
+    <Compile Include="DbOperationsDL\serviceImplmentation\CustomerDb.cs" />
+    <Compile Include="DbOperationsDL\serviceImplmentation\ItemDb.cs" />
+    <Compile Include="DbOperationsDL\serviceImplmentation\TreaderDb.cs" />
+    <Compile Include="DbOperationsDL\serviceImplmentation\TreaderTransactionsDb.cs" />
+    <Compile Include="DbOperationsDL\serviceImplmentation\WorkerDb.cs" />
+    <Compile Include="DbOperationsDL\servicesProvider\IBillDb.cs" />
+    <Compile Include="DbOperationsDL\servicesProvider\ICustomerDb.cs" />
+    <Compile Include="DbOperationsDL\servicesProvider\IItemDb.cs" />
+    <Compile Include="DbOperationsDL\servicesProvider\ITreaderDb.cs" />
+    <Compile Include="DbOperationsDL\servicesProvider\ITreaderTransactionDb.cs" />
+    <Compile Include="DbOperationsDL\servicesProvider\IWorker.cs" />
     <Compile Include="PrintBill.xaml.cs">
       <DependentUpon>PrintBill.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ShopDatabaseModel.Context.cs">
+    <Compile Include="DbOperationsDL\ShopDatabaseModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ShopDatabaseModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ShopDatabaseModel.cs">
+    <Compile Include="DbOperationsDL\ShopDatabaseModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ShopDatabaseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ShopDatabaseModel.Designer.cs">
+    <Compile Include="DbOperationsDL\ShopDatabaseModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ShopDatabaseModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+    <Compile Include="DbOperationsDL\sp_helpdiagramdefinition_Result.cs">
       <DependentUpon>ShopDatabaseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
+    <Compile Include="DbOperationsDL\sp_helpdiagrams_Result.cs">
       <DependentUpon>ShopDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="sysdiagram.cs">
+    <Compile Include="DbOperationsDL\sysdiagram.cs">
       <DependentUpon>ShopDatabaseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TbBill.cs">
+    <Compile Include="DbOperationsDL\TbBill.cs">
       <DependentUpon>ShopDatabaseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TbBillsItemsBridge.cs">
+    <Compile Include="DbOperationsDL\TbBillsItemsBridge.cs">
       <DependentUpon>ShopDatabaseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TbBill_Items.cs">
+    <Compile Include="DbOperationsDL\TbBill_Items.cs">
       <DependentUpon>ShopDatabaseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TbCustomer.cs">
+    <Compile Include="DbOperationsDL\TbCustomer.cs">
       <DependentUpon>ShopDatabaseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TbItemType.cs">
+    <Compile Include="DbOperationsDL\TbItemType.cs">
       <DependentUpon>ShopDatabaseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TbPassword.cs">
+    <Compile Include="DbOperationsDL\TbPassword.cs">
       <DependentUpon>ShopDatabaseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TbStock.cs">
+    <Compile Include="DbOperationsDL\TbStock.cs">
       <DependentUpon>ShopDatabaseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TbTreader.cs">
+    <Compile Include="DbOperationsDL\TbTreader.cs">
       <DependentUpon>ShopDatabaseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TbTreaderTransaction.cs">
+    <Compile Include="DbOperationsDL\TbTreaderTransaction.cs">
       <DependentUpon>ShopDatabaseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TbWorker.cs">
+    <Compile Include="DbOperationsDL\TbWorker.cs">
       <DependentUpon>ShopDatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="WorkerManipolute.xaml.cs">
       <DependentUpon>WorkerManipolute.xaml</DependentUpon>
     </Compile>
     <Compile Include="BillItems.cs" />
-    <Compile Include="DbOperations.cs" />
+    <Compile Include="DbOperationsDL\DbOperations.cs" />
     <Compile Include="PasswordWindow.xaml.cs">
       <DependentUpon>PasswordWindow.xaml</DependentUpon>
     </Compile>
@@ -211,11 +223,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <EntityDeploy Include="ShopDatabaseModel.edmx">
+    <EntityDeploy Include="DbOperationsDL\ShopDatabaseModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ShopDatabaseModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ShopDatabaseModel.edmx.diagram">
+    <None Include="DbOperationsDL\ShopDatabaseModel.edmx.diagram">
       <DependentUpon>ShopDatabaseModel.edmx</DependentUpon>
     </None>
   </ItemGroup>
@@ -225,12 +237,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ShopDatabaseModel.Context.tt">
+    <Content Include="DbOperationsDL\ShopDatabaseModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ShopDatabaseModel.edmx</DependentUpon>
       <LastGenOutput>ShopDatabaseModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="ShopDatabaseModel.tt">
+    <Content Include="DbOperationsDL\ShopDatabaseModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ShopDatabaseModel.edmx</DependentUpon>
       <LastGenOutput>ShopDatabaseModel.cs</LastGenOutput>
@@ -252,5 +264,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,27 +7,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ChickenShop
+namespace ChickenShop.DbOperationsDL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class TbBill_Items
+    public partial class TbCustomer
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TbBill_Items()
+        public TbCustomer()
         {
-            this.TbBillsItemsBridges = new HashSet<TbBillsItemsBridge>();
+            this.TbBills = new HashSet<TbBill>();
         }
     
-        public long ItemIDPK { get; set; }
-        public decimal Price { get; set; }
-        public int ItemID_FK { get; set; }
-        public decimal Quantity { get; set; }
-        public System.DateTime TodayItem { get; set; }
+        public long Customer_ID { get; set; }
+        public string CustomerName { get; set; }
+        public string CustomerAddress { get; set; }
+        public string CustomerMobileNumber { get; set; }
+        public Nullable<int> CustomerPoints { get; set; }
     
-        public virtual TbItemType TbItemType { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TbBillsItemsBridge> TbBillsItemsBridges { get; set; }
+        public virtual ICollection<TbBill> TbBills { get; set; }
     }
 }

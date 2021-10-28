@@ -7,17 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ChickenShop
+namespace ChickenShop.DbOperationsDL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagram
+    public partial class TbBillsItemsBridge
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public long ItemsInBillID { get; set; }
+        public Nullable<long> BillFkID { get; set; }
+        public Nullable<long> ItemsFkID { get; set; }
+    
+        public virtual TbBill_Items TbBill_Items { get; set; }
+        public virtual TbBill TbBill { get; set; }
     }
 }

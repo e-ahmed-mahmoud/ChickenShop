@@ -7,18 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ChickenShop
+namespace ChickenShop.DbOperationsDL
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class TbBillsItemsBridge
+    public partial class sp_helpdiagrams_Result
     {
-        public long ItemsInBillID { get; set; }
-        public Nullable<long> BillFkID { get; set; }
-        public Nullable<long> ItemsFkID { get; set; }
-    
-        public virtual TbBill_Items TbBill_Items { get; set; }
-        public virtual TbBill TbBill { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }

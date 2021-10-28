@@ -7,14 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ChickenShop
+namespace ChickenShop.DbOperationsDL
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class TbPassword
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public int @int { get; set; }
-        public string Password { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

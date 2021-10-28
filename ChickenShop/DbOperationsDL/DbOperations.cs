@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChickenShop.DbOperationsDL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace ChickenShop
 {
     class DbOperations
     {
-        private ShopContext _context = new ShopContext();
+        private readonly ShopContext _context = new ShopContext();
         public long ItemPk { get; set; }
 
         public long CustomerPk { get; set; }

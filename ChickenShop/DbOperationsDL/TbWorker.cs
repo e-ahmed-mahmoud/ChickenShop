@@ -7,23 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ChickenShop
+namespace ChickenShop.DbOperationsDL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class TbItemType
+    public partial class TbWorker
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TbItemType()
+        public TbWorker()
         {
-            this.TbBill_Items = new HashSet<TbBill_Items>();
+            this.TbBills = new HashSet<TbBill>();
         }
     
-        public int ItemID { get; set; }
-        public string ItemName { get; set; }
+        public int WorkerID { get; set; }
+        public string WorkerName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TbBill_Items> TbBill_Items { get; set; }
+        public virtual ICollection<TbBill> TbBills { get; set; }
     }
 }

@@ -7,29 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ChickenShop
+namespace ChickenShop.DbOperationsDL
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class TbTreader
+    public partial class TbBill
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TbTreader()
+        public TbBill()
         {
-            this.TbBills = new HashSet<TbBill>();
-            this.TbTreaderTransactions = new HashSet<TbTreaderTransaction>();
+            this.TbBillsItemsBridges = new HashSet<TbBillsItemsBridge>();
         }
     
-        public long TreaderID { get; set; }
-        public string TreaderName { get; set; }
-        public decimal Money { get; set; }
-        public string TreaderMobileNumber { get; set; }
-        public string TreaderAddress { get; set; }
+        public long BilI_ID { get; set; }
+        public decimal TotalPrice { get; set; }
+        public Nullable<long> CustomerID { get; set; }
+        public Nullable<long> TreaderID { get; set; }
+        public int WorkerID { get; set; }
     
+        public virtual TbCustomer TbCustomer { get; set; }
+        public virtual TbWorker TbWorker { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TbBill> TbBills { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TbTreaderTransaction> TbTreaderTransactions { get; set; }
+        public virtual ICollection<TbBillsItemsBridge> TbBillsItemsBridges { get; set; }
+        public virtual TbTreader TbTreader { get; set; }
     }
 }
